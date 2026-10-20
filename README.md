@@ -16,15 +16,14 @@ without disconnecting your device. No root needed.
 
 ## Download
 
-1. Go to the [Actions tab](../../actions) and open the latest successful **Build APK** run.
-2. Scroll down to **Artifacts** and download **BtSyncReset-apk**.
-3. Unzip it to get `app-debug.apk`.
+### [⬇️ Download the latest APK](https://github.com/gowthamdharma22/BtSyncReset/releases/latest/download/BtSyncReset.apk)
 
-If the artifact has expired, open **Actions > Build APK > Run workflow** to build a fresh one.
+No GitHub login needed. Works from your phone's browser, or from the **Releases** section in the
+GitHub app. Every change pushed to `main` builds and publishes a new release automatically.
 
 ## Install
 
-1. Copy `app-debug.apk` to your phone and open it.
+1. Open `BtSyncReset.apk` on your phone.
 2. Allow "Install unknown apps" when asked.
 3. For the auto-reset feature on OnePlus/OxygenOS, set the app's battery usage to **Unrestricted**
    and allow **Auto-launch**.
