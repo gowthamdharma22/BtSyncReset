@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BT Sync Reset</string>
+    <string name="intro">Fixes Bluetooth audio drifting behind video by briefly pausing and resuming playback, which flushes the audio delay without disconnecting your device.</string>
+    <string name="reset_button">Reset Sync</string>
+    <string name="status_ready">Start your video, then tap Reset Sync.</string>
+    <string name="status_resetting">Pausing for %1$d ms…</string>
+    <string name="status_done">Done ✓ If it\'s still off, try a longer pause.</string>
+    <string name="status_nothing_playing">Nothing is playing. Start your video first.</string>
+    <string name="status_no_bt">No Bluetooth audio device connected.</string>
+    <string name="status_busy">Already resetting…</string>
+    <string name="status_permission_denied">Bluetooth permission denied, so auto-reset is off.</string>
+    <string name="status_tile_added">Tile is in your Quick Settings.</string>
+    <string name="status_tile_not_added">Tile not added. You can add it by editing your Quick Settings panel.</string>
+    <string name="pause_label">Pause length: %1$d ms</string>
+    <string name="pause_hint">Start around 1000 ms. If sync isn\'t fixed, raise it step by step. Around 3000–4000 ms usually forces the audio output fully idle, which is the strongest reset.</string>
+    <string name="auto_switch">Auto-reset 4 s after a Bluetooth audio device connects (only if something is playing)</string>
+    <string name="add_tile_button">Add Quick Settings tile</string>
+    <string name="tile_hint">The tile lets you reset from the notification shade without leaving your video.</string>
+    <string name="tile_label">Reset Sync</string>
+    <string name="tile_resetting">Resetting…</string>
+    <string name="tile_nothing_playing">Nothing playing</string>
+    <string name="tile_no_bt">No BT audio</string>
+</resources>
