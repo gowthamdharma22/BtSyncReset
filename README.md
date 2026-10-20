@@ -1,26 +1,35 @@
 # BT Sync Reset
 
-Tier 1 "soft reset" for Bluetooth audio/video drift: pause, wait, play. This flushes the
-Bluetooth audio buffer without disconnecting. No root, no special permissions.
+An Android app that fixes Bluetooth audio drifting out of sync with video.
 
-## Build option A: Android Studio
-1. Open this folder in Android Studio (File > Open) and let Gradle sync finish.
-2. Build > Build App Bundle(s) / APK(s) > Build APK(s).
-3. The APK appears in app/build/outputs/apk/debug/app-debug.apk.
+## What it does
 
-## Build option B: GitHub (no Android Studio needed)
-1. Create a new GitHub repo and upload all files in this folder, including the hidden .github folder.
-2. Open the repo's Actions tab. "Build APK" runs automatically, or click "Run workflow".
-3. When it finishes, download the BtSyncReset-apk artifact, unzip it, and copy the APK to your phone.
+After a while, Bluetooth audio can lag behind the video. Disconnecting and reconnecting the
+headset fixes it, but that's annoying to do by hand. This app does the same reset in one tap:
+it briefly pauses whatever is playing and resumes it, which clears the built-up audio delay
+without disconnecting your device. No root needed.
 
-## Install on OnePlus
-Open the APK on the phone and allow "Install unknown apps" for your file manager when asked.
+- **Reset Sync button** in the app
+- **Quick Settings tile** so you can reset from the notification shade without leaving your video
+- **Adjustable pause length** (300 to 5000 ms)
+- **Optional auto-reset** a few seconds after your Bluetooth device connects
 
-For auto-reset-on-connect, also go to Settings > Apps > BT Sync Reset > Battery, set it to
-Unrestricted, and allow Auto-launch if OxygenOS shows that option.
+## Download
 
-## Tuning
-- Start with 1000 ms. If the sync isn't fixed, increase the pause.
-- Around 3000-4000 ms usually lets Android put the audio output fully on standby (strongest reset).
-- If even 5000 ms doesn't fix it on your headset, Tier 1 isn't enough, and you'd need the
-  Shizuku-based reconnect (Tier 3).
+1. Go to the [Actions tab](../../actions) and open the latest successful **Build APK** run.
+2. Scroll down to **Artifacts** and download **BtSyncReset-apk**.
+3. Unzip it to get `app-debug.apk`.
+
+If the artifact has expired, open **Actions > Build APK > Run workflow** to build a fresh one.
+
+## Install
+
+1. Copy `app-debug.apk` to your phone and open it.
+2. Allow "Install unknown apps" when asked.
+3. For the auto-reset feature on OnePlus/OxygenOS, set the app's battery usage to **Unrestricted**
+   and allow **Auto-launch**.
+
+## Usage tips
+
+- Start with a 1000 ms pause. If the audio is still behind, increase it step by step.
+- Around 3000 to 4000 ms usually gives the strongest reset.
